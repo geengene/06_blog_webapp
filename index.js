@@ -27,6 +27,13 @@ app.post("/submit", (req, res) => {
   res.redirect("/");
 });
 
+app.get("/edit/:id", (req, res) => {
+  console.log(req.params);
+  const postId = req.params.id;
+  const post = posts[postId];
+  res.render("edit.ejs", { post });
+});
+
 app.listen(port, () => {
   console.log(`Server running on port ${port}`);
 });

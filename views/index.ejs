@@ -11,7 +11,9 @@
     <div class="blogPosts">
       <% if (posts && posts.length > 0) { %> <% posts.forEach(post => { %>
       <div class="blogPost">
-        <h2><%= post.title %></h2>
+        <h2>
+          <a href="/edit/<%= posts.indexOf(post) %>"><%= post.title %></a>
+        </h2>
         <h3><%= post.subheader %></h3>
         <p><%= post.paragraph %></p>
       </div>
