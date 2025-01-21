@@ -3,20 +3,17 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Blog WebApp</title>
+    <link rel="stylesheet" href="/styles/index.css" />
+    <title>index</title>
   </head>
-  <body>
-    <%- include("partials/header.ejs") %> <% if (locals.title) { %>
-    <h1>Title: <%= title %></h1>
-    <% } else {%>
-    <h1>No Title</h1>
-    <% } %> <% if (locals.subheader) { %>
-    <h4>Subheader: <%= subheader %></h4>
-    <% } else {%>
-    <h4>No Subheader</h4>
+  <body class="indexBody">
+    <%- include ("partials/header.ejs") %> <% if (posts && posts.length > 0) {
+    %> <% posts.forEach(post => { %>
+    <h1><%= post.title %></h1>
+    <h3><%= post.subheader %></h3>
+    <p><%= post.paragraph %></p>
+    <% }) %> <% } else { %>
+    <p>No posts available.</p>
     <% } %>
-    <form action="/submit" method="POST">
-      <input type="text" name="paragraph" />
-    </form>
   </body>
 </html>
