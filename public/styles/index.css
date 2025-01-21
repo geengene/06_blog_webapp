@@ -41,7 +41,7 @@ header button:hover {
 .blogPost {
   border: solid;
   padding: 10px;
-  margin: 5px;
+  margin: 3px;
   word-wrap: break-word;
   text-align: center;
 }
@@ -52,6 +52,7 @@ header button:hover {
   display: -webkit-box;
   -webkit-line-clamp: 8; /* Number of lines to show before ellipsis */
   -webkit-box-orient: vertical;
+  margin-bottom: 3px;
 }
 .blogPost h2 {
   text-decoration: underline;
@@ -68,4 +69,70 @@ header button:hover {
   display: -webkit-box;
   -webkit-line-clamp: 1; /* Number of lines to show before ellipsis */
   -webkit-box-orient: vertical;
+}
+
+.blogPost button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.blogPost button:hover {
+  background-color: #0056b3;
+}
+.formContainer {
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.formContainer input[type="text"],
+.formContainer textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.formContainer textarea {
+  height: 150px;
+  resize: vertical;
+}
+
+.formContainer input[type="submit"] {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.formContainer input[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+.formGroup {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.formGroup h2,
+.formGroup h3,
+.formGroup h4 {
+  margin-bottom: 10px;
+  color: #333;
 }

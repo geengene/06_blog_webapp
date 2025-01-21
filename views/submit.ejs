@@ -3,17 +3,26 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/styles/index.css" />
     <title>Blog WebApp</title>
   </head>
   <body>
-    <form class="formContainer" action="/submit" method="POST">
-      <h2>Title:</h2>
-      <input type="text" name="Title" required />
-      <h3>Subheader:</h3>
-      <input type="text" name="Subheader" required /><br />
-      <h4>Content:</h4>
-      <textarea name="paragraph"></textarea><br />
-      <input type="submit" value="Submit" required />
-    </form>
+    <div class="formContainer">
+      <form action="/submit" method="POST">
+        <div class="formGroup">
+          <h2>Title:</h2>
+          <input type="text" name="Title" required />
+        </div>
+        <div class="formGroup">
+          <h3>Subheader:</h3>
+          <input type="text" name="Subheader" required /><br />
+        </div>
+        <div class="formGroup">
+          <h4>Content:</h4>
+          <textarea name="paragraph"></textarea><br />
+        </div>
+        <input type="submit" value="Submit" required />
+      </form>
+    </div>
   </body>
 </html>
