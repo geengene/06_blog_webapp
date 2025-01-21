@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog WebApp</title>
+  </head>
+  <body>
+    <%- include("partials/header.ejs") %> <% if (locals.title) { %>
+    <h1>Title: <%= title %></h1>
+    <% } else {%>
+    <h1>No Title</h1>
+    <% } %> <% if (locals.subheader) { %>
+    <h4>Subheader: <%= subheader %></h4>
+    <% } else {%>
+    <h4>No Subheader</h4>
+    <% } %>
+    <form action="/submit" method="POST">
+      <input type="text" name="paragraph" />
+    </form>
+  </body>
+</html>
