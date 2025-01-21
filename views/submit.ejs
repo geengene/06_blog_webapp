@@ -6,13 +6,14 @@
     <title>Blog WebApp</title>
   </head>
   <body>
-    <form action="/submit" method="POST">
+    <form class="formContainer" action="/submit" method="POST">
       <h2>Title:</h2>
-      <input type="text" name="Title" />
+      <input type="text" name="Title" required />
       <h3>Subheader:</h3>
-      <input type="text" name="Subheader" /><br />
-      <textarea name="paragraph"></textarea>
-      <input type="submit" value="Submit" />
+      <input type="text" name="Subheader" required /><br />
+      <h4>Content:</h4>
+      <textarea name="paragraph"></textarea><br />
+      <input type="submit" value="Submit" required />
     </form>
   </body>
 </html>

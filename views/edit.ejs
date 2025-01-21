@@ -3,14 +3,35 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Edit Post</title>
   </head>
   <body>
-    <h1>Title:</h1>
-    <%= post.title %>
-    <h2>Subheader:</h2>
-    <%= post.subheader %>
-    <p>paragraph:</p>
-    <%= post.paragraph %>
+    <h1>Edit Post</h1>
+    <form action="/edit/<%= postId %>" method="POST">
+      <label for="title">Title:</label>
+      <input
+        type="text"
+        id="title"
+        name="title"
+        value="<%= post.title %>"
+        required
+      />
+      <br />
+      <label for="subheader">Subheader:</label>
+      <input
+        type="text"
+        id="subheader"
+        name="subheader"
+        value="<%= post.subheader %>"
+        required
+      />
+      <br />
+      <label for="paragraph">Paragraph:</label>
+      <textarea id="paragraph" name="paragraph" required>
+<%= post.paragraph %></textarea
+      >
+      <br />
+      <button type="submit">Save Changes</button>
+    </form>
   </body>
 </html>
