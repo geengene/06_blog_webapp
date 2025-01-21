@@ -7,13 +7,17 @@
     <title>index</title>
   </head>
   <body class="indexBody">
-    <%- include ("partials/header.ejs") %> <% if (posts && posts.length > 0) {
-    %> <% posts.forEach(post => { %>
-    <h1><%= post.title %></h1>
-    <h3><%= post.subheader %></h3>
-    <p><%= post.paragraph %></p>
-    <% }) %> <% } else { %>
-    <p>No posts available.</p>
-    <% } %>
+    <%- include ("partials/header.ejs") %>
+    <div class="blogPosts">
+      <% if (posts && posts.length > 0) { %> <% posts.forEach(post => { %>
+      <div class="blogPost">
+        <h2><%= post.title %></h2>
+        <h3><%= post.subheader %></h3>
+        <p><%= post.paragraph %></p>
+      </div>
+      <% }) %> <% } else { %>
+      <p>No posts available.</p>
+      <% } %>
+    </div>
   </body>
 </html>

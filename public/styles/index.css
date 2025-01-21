@@ -2,14 +2,10 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
 }
-.indexBody {
-  margin: 5px;
-}
 
 header {
   background-color: #82b9f0;
   padding: 10px 20px;
-  border-bottom: 1px solid #e0e0e0;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -30,4 +26,46 @@ header button {
 
 header button:hover {
   background-color: #0056b3;
+}
+
+.blogPosts {
+  margin: 8px;
+  display: grid;
+  grid-template-columns: 23vw 23vw 23vw 23vw;
+  grid-auto-rows: 33vh;
+  column-gap: 10px;
+  row-gap: 10px;
+  justify-content: space-around;
+}
+
+.blogPost {
+  border: solid;
+  padding: 10px;
+  margin: 5px;
+  word-wrap: break-word;
+  text-align: center;
+}
+
+.blogPost p {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 8; /* Number of lines to show before ellipsis */
+  -webkit-box-orient: vertical;
+}
+.blogPost h2 {
+  text-decoration: underline;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1; /* Number of lines to show before ellipsis */
+  -webkit-box-orient: vertical;
+}
+
+.blogPost h3 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1; /* Number of lines to show before ellipsis */
+  -webkit-box-orient: vertical;
 }
