@@ -11,7 +11,7 @@
       <h1>Edit Post</h1>
       <form action="/edit/<%= postId %>" method="POST">
         <div class="formGroup">
-          <label for="title">Title:</label>
+          <h2>Title:</h2>
           <input
             type="text"
             id="title"
@@ -22,7 +22,7 @@
         </div>
         <br />
         <div class="formGroup">
-          <label for="subheader">Subheader:</label>
+          <h3>Subheader:</h3>
           <input
             type="text"
             id="subheader"
@@ -33,9 +33,9 @@
         </div>
         <br />
         <div class="formGroup">
-          <label for="paragraph">Paragraph:</label>
+          <h4>Content:</h4>
           <textarea id="paragraph" name="paragraph" required>
-        <%= post.paragraph %></textarea
+<%= post.paragraph %></textarea
           >
         </div>
         <br />

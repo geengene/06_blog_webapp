@@ -16,9 +16,9 @@
         </h2>
         <h3><%= post.subheader %></h3>
         <p><%= post.paragraph %></p>
-        <button>
-          <a href="/delete/<%= posts.indexOf(post) %>"><span>Delete</span></a>
-        </button>
+        <a href="/delete/<%= posts.indexOf(post) %>">
+          <button><span>Delete</span></button>
+        </a>
       </div>
       <% }) %> <% } else { %>
       <p>No posts available.</p>
